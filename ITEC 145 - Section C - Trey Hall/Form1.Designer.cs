@@ -33,15 +33,15 @@
             this.txtLoad = new System.Windows.Forms.TextBox();
             this.txtToGrid = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.btnSave = new System.Windows.Forms.Button();
             this.First_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Last_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Street_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Province = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Postal_Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +95,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(647, 206);
             this.dataGridView1.TabIndex = 4;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(459, 12);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(177, 23);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "Save Data from Grid to File";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // First_Name
             // 
             this.First_Name.HeaderText = "First Name";
@@ -109,35 +123,25 @@
             // 
             this.Street_Address.HeaderText = "Street_Address";
             this.Street_Address.Name = "Street_Address";
+            this.Street_Address.Width = 150;
             // 
             // City
             // 
             this.City.HeaderText = "City";
             this.City.Name = "City";
+            this.City.Width = 85;
             // 
             // Province
             // 
             this.Province.HeaderText = "Province";
             this.Province.Name = "Province";
+            this.Province.Width = 65;
             // 
             // Postal_Code
             // 
             this.Postal_Code.HeaderText = "Postal Code";
             this.Postal_Code.Name = "Postal_Code";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(459, 12);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(177, 23);
-            this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "Save Data from Grid to File";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.Postal_Code.Width = 55;
             // 
             // Form1
             // 
@@ -165,14 +169,14 @@
         private TextBox txtLoad;
         private TextBox txtToGrid;
         private DataGridView dataGridView1;
+        private OpenFileDialog openFileDialog1;
+        private SaveFileDialog saveFileDialog1;
+        private Button btnSave;
         private DataGridViewTextBoxColumn First_Name;
         private DataGridViewTextBoxColumn Last_Name;
         private DataGridViewTextBoxColumn Street_Address;
         private DataGridViewTextBoxColumn City;
         private DataGridViewTextBoxColumn Province;
         private DataGridViewTextBoxColumn Postal_Code;
-        private OpenFileDialog openFileDialog1;
-        private SaveFileDialog saveFileDialog1;
-        private Button btnSave;
     }
 }

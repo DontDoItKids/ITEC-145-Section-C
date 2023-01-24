@@ -48,20 +48,25 @@ namespace ITEC_145___Section_C___Trey_Hall
         private void btnSave_Click(object sender, EventArgs e)
         {
             saveFileDialog1.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            //saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.ShowDialog();
 
             if(saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                foreach(DataGridViewRow DGRow in dataGridView1.Rows)
-                {
-                    if (DGRow.Cells[0].Value != null)
-                    {
-                        StreamWriter outputData = new StreamWriter(saveFileDialog1.FileName);
-                        outputData.WriteLine(DGRow.Cells[0].Value.ToString());
+                StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
 
-                        outputData.Close();
+                for (int i = 0; i < dataGridView1.Rows.Count -1; i++)
+                {
+                    for(int f = 0; f < dataGridView1.Columns.Count; f++)
+                    {
+                        sw.Write($"{dataGridView1.Rows[i].Cells[f].Value}");
+
+                        if(f != dataGridView1.Columns.Count - 1)
+                        {
+
+                        }
+
                     }
+                    sw.WriteLine();
+
                 }
                 
 
