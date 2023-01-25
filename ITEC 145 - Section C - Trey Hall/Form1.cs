@@ -3,7 +3,9 @@ namespace ITEC_145___Section_C___Trey_Hall
     public partial class Form1 : Form
     {
         List<string> dataList = new List<string>();
-        
+        int dgRowIndex;
+
+        int count = 0;
 
         public Form1()
         {
@@ -68,10 +70,46 @@ namespace ITEC_145___Section_C___Trey_Hall
                     sw.WriteLine();
 
                 }
-                
 
+                
             }
         }
+
+        public void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            //Thanks Steve
+            dgRowIndex = e.RowIndex;
+
+            //Put it in a while loop so it only creates the button once
+            while (count == 0)
+            {
+                Button btnDelete = new Button();
+                btnDelete.Text = "Delete Cell";
+                btnDelete.Size = new Size(177, 23);
+                btnDelete.Left = 459;
+                btnDelete.Top = 41;
+                btnDelete.BackColor = Color.White;
+                //Just looked at the refrences for other buttons and added this line
+                //ESSENTIAL for the button to actually function
+                btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+
+                Controls.Add(btnDelete);
+                count++;
+            }
+
+
+        }
+
+        public void btnDelete_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Test");
+
+        }
+
+
+
+
     }
 
 
