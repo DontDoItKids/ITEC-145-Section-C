@@ -3,8 +3,8 @@ namespace ITEC_145___Section_C___Trey_Hall
     public partial class Form1 : Form
     {
         List<string> dataList = new List<string>();
-        int dgRowIndex;
 
+        int dgRowIndex;
         int count = 0;
 
         public Form1()
@@ -49,6 +49,7 @@ namespace ITEC_145___Section_C___Trey_Hall
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
             if(saveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -59,19 +60,17 @@ namespace ITEC_145___Section_C___Trey_Hall
                 {
                     for(int f = 0; f < dataGridView1.Columns.Count; f++)
                     {
-                        sw.Write($"{dataGridView1.Rows[i].Cells[f].Value}");
+                        sw.Write($"{dataGridView1.Rows[i].Cells[f].Value},");
 
-                        if(f != dataGridView1.Columns.Count - 1)
+                        if (f == dataGridView1.Columns.Count - 1)
                         {
-
+                            sw.WriteLine();
                         }
 
                     }
-                    sw.WriteLine();
 
                 }
-
-                
+                sw.Close();
             }
         }
 
@@ -81,36 +80,34 @@ namespace ITEC_145___Section_C___Trey_Hall
             //Thanks Steve
             dgRowIndex = e.RowIndex;
 
-            //Put it in a while loop so it only creates the button once
+            //Put it in a while loop so it only creates the button onceBahnschrift SemiBold SemiConden, 9.75pt, style=Bold
             while (count == 0)
             {
                 Button btnDelete = new Button();
                 btnDelete.Text = "Delete Cell";
+                btnDelete.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 9.75F, System.Drawing.FontStyle.Bold);
                 btnDelete.Size = new Size(177, 23);
                 btnDelete.Left = 459;
                 btnDelete.Top = 41;
                 btnDelete.BackColor = Color.White;
+                btnDelete.FlatStyle = FlatStyle.Flat;
+
+
                 //Just looked at the refrences for other buttons and added this line
-                //ESSENTIAL for the button to actually function
+                //its ESSENTIAL for the button to actually function
                 btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 
                 Controls.Add(btnDelete);
                 count++;
             }
 
-
         }
 
         public void btnDelete_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Test");
-
+            dataGridView1.Rows.RemoveAt(dgRowIndex);
         }
 
-
-
-
     }
-
 
 }

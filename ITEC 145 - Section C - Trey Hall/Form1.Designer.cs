@@ -47,22 +47,28 @@
             // 
             // btnLoad
             // 
+            this.btnLoad.BackColor = System.Drawing.Color.White;
+            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoad.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLoad.Location = new System.Drawing.Point(12, 12);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(177, 23);
             this.btnLoad.TabIndex = 0;
             this.btnLoad.Text = "Load Data from File to List";
-            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.UseVisualStyleBackColor = false;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnToGrid
             // 
+            this.btnToGrid.BackColor = System.Drawing.Color.White;
+            this.btnToGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnToGrid.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnToGrid.Location = new System.Drawing.Point(12, 41);
             this.btnToGrid.Name = "btnToGrid";
             this.btnToGrid.Size = new System.Drawing.Size(177, 23);
             this.btnToGrid.TabIndex = 1;
             this.btnToGrid.Text = "Move Data from List to Grid";
-            this.btnToGrid.UseVisualStyleBackColor = true;
+            this.btnToGrid.UseVisualStyleBackColor = false;
             this.btnToGrid.Click += new System.EventHandler(this.btnToGrid_Click);
             // 
             // txtLoad
@@ -89,6 +95,7 @@
             this.City,
             this.Province,
             this.Postal_Code});
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dataGridView1.Location = new System.Drawing.Point(12, 70);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
@@ -136,12 +143,15 @@
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.White;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSave.Location = new System.Drawing.Point(459, 12);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(177, 23);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save Data from Grid to File";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Form1
