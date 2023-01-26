@@ -28,8 +28,6 @@ namespace ITEC_145___Section_C___Trey_Hall
                 txtLoad.Text = $"Read {dataList.Count.ToString()} records. Data List now has {dataList.Count.ToString()} records.";
 
             }
-
-
         
         }
 
@@ -42,7 +40,6 @@ namespace ITEC_145___Section_C___Trey_Hall
                 dataGridView1.Rows.Add(tmpStringArr);
 
             }
-
             txtToGrid.Text = $"Added {dataList.Count.ToString()} records to Grid View.";
 
         }
@@ -72,23 +69,22 @@ namespace ITEC_145___Section_C___Trey_Hall
                 }
                 sw.Close();
             }
+
         }
 
         public void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            //Thanks Steve
             dgRowIndex = e.RowIndex;
 
-            //Put it in a while loop so it only creates the button onceBahnschrift SemiBold SemiConden, 9.75pt, style=Bold
+            //Put it in a while loop so it only creates the button once
             while (count == 0)
             {
                 Button btnDelete = new Button();
-                btnDelete.Text = "Delete Cell";
+                btnDelete.Text = "Delete Row";
                 btnDelete.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 9.75F, System.Drawing.FontStyle.Bold);
                 btnDelete.Size = new Size(177, 23);
                 btnDelete.Left = 459;
-                btnDelete.Top = 41;
+                btnDelete.Top = 42;
                 btnDelete.BackColor = Color.White;
                 btnDelete.FlatStyle = FlatStyle.Flat;
 

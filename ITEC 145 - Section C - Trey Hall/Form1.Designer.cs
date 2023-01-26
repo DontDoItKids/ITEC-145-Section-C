@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnToGrid = new System.Windows.Forms.Button();
             this.txtLoad = new System.Windows.Forms.TextBox();
@@ -50,7 +53,7 @@
             this.btnLoad.BackColor = System.Drawing.Color.White;
             this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoad.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLoad.Location = new System.Drawing.Point(12, 12);
+            this.btnLoad.Location = new System.Drawing.Point(12, 13);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(177, 23);
             this.btnLoad.TabIndex = 0;
@@ -63,30 +66,43 @@
             this.btnToGrid.BackColor = System.Drawing.Color.White;
             this.btnToGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnToGrid.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnToGrid.Location = new System.Drawing.Point(12, 41);
+            this.btnToGrid.Location = new System.Drawing.Point(12, 42);
             this.btnToGrid.Name = "btnToGrid";
             this.btnToGrid.Size = new System.Drawing.Size(177, 23);
-            this.btnToGrid.TabIndex = 1;
+            this.btnToGrid.TabIndex = 2;
             this.btnToGrid.Text = "Move Data from List to Grid";
             this.btnToGrid.UseVisualStyleBackColor = false;
             this.btnToGrid.Click += new System.EventHandler(this.btnToGrid_Click);
             // 
             // txtLoad
             // 
+            this.txtLoad.BackColor = System.Drawing.Color.White;
+            this.txtLoad.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtLoad.Location = new System.Drawing.Point(195, 13);
             this.txtLoad.Name = "txtLoad";
-            this.txtLoad.Size = new System.Drawing.Size(258, 23);
-            this.txtLoad.TabIndex = 2;
+            this.txtLoad.Size = new System.Drawing.Size(258, 22);
+            this.txtLoad.TabIndex = 1;
             // 
             // txtToGrid
             // 
+            this.txtToGrid.BackColor = System.Drawing.Color.White;
+            this.txtToGrid.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtToGrid.Location = new System.Drawing.Point(195, 42);
             this.txtToGrid.Name = "txtToGrid";
-            this.txtToGrid.Size = new System.Drawing.Size(258, 23);
+            this.txtToGrid.Size = new System.Drawing.Size(258, 22);
             this.txtToGrid.TabIndex = 3;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(126)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.First_Name,
@@ -98,8 +114,23 @@
             this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dataGridView1.Location = new System.Drawing.Point(12, 70);
             this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(126)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(126)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(647, 206);
+            this.dataGridView1.Size = new System.Drawing.Size(653, 211);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -115,7 +146,7 @@
             // 
             // Street_Address
             // 
-            this.Street_Address.HeaderText = "Street_Address";
+            this.Street_Address.HeaderText = "Street Address";
             this.Street_Address.Name = "Street_Address";
             this.Street_Address.Width = 150;
             // 
@@ -123,7 +154,7 @@
             // 
             this.City.HeaderText = "City";
             this.City.Name = "City";
-            this.City.Width = 115;
+            this.City.Width = 120;
             // 
             // Province
             // 
@@ -135,7 +166,7 @@
             // 
             this.Postal_Code.HeaderText = "Postal Code";
             this.Postal_Code.Name = "Postal_Code";
-            this.Postal_Code.Width = 55;
+            this.Postal_Code.Width = 60;
             // 
             // openFileDialog1
             // 
@@ -146,7 +177,7 @@
             this.btnSave.BackColor = System.Drawing.Color.White;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSave.Location = new System.Drawing.Point(459, 12);
+            this.btnSave.Location = new System.Drawing.Point(459, 13);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(177, 23);
             this.btnSave.TabIndex = 5;
@@ -158,7 +189,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 339);
+            this.BackColor = System.Drawing.Color.Azure;
+            this.ClientSize = new System.Drawing.Size(689, 301);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtToGrid);
@@ -166,7 +198,7 @@
             this.Controls.Add(this.btnToGrid);
             this.Controls.Add(this.btnLoad);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Data Grid View Address CSV File Reader";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
