@@ -5,7 +5,7 @@ namespace ITEC_145___Section_C___Trey_Hall
         List<string> dataList = new List<string>();
 
         int dgRowIndex;
-        int count = 0;
+        int count = 0; //Should have made it -1 so starts with nothing selected
 
         public Form1()
         {
@@ -102,6 +102,7 @@ namespace ITEC_145___Section_C___Trey_Hall
         public void btnDelete_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.RemoveAt(dgRowIndex);
+            //was suppose to also remove the data from the list!!!
         }
 
     }
